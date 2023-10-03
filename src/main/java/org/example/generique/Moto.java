@@ -2,6 +2,11 @@ package org.example.generique;
 
 public class Moto {
     private String Name;
+
+    public Moto(String name) {
+        Name = name;
+    }
+
     public String getName() {
         return Name;
     }
@@ -10,7 +15,10 @@ public class Moto {
         Name = name;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Moto{" +
+                "Name='" + Name + '\'' +
+                '}';
+    }
 }
