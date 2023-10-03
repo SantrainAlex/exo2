@@ -1,17 +1,19 @@
 package org.example.generique;
 
+import java.util.ArrayList;
+
 public class Hangar<T> {
-    private T contenu;
+    private ArrayList<T> tableau;
 
-    public Hangar(T contenu){
-        this.contenu = contenu;
+    public Hangar() {
+        this.tableau = new ArrayList<T>();
     }
 
-    public T getContenu(){
-        return contenu;
+    public ArrayList<T> getAll(){
+        return tableau;
     }
 
-    public void setContenu(T contenu){
-        this.contenu = contenu;
+    public void addElement(T value){
+        tableau.add(value);
     }
 }
