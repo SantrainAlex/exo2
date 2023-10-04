@@ -4,30 +4,25 @@ import java.util.Random;
 
 public class Chambre {
     private int id;
-    private boolean status;
+    private boolean status = false;
     private int nbrLits;
     private double tarif;
-    {
-        ++id;
-        status = false;
-    }
+
+    private static int nbrChambre = 0;
+
 
     public Chambre(int nbrLits, double tarif) {
+        this.id = nbrChambre++;
         this.nbrLits = nbrLits;
         this.tarif = tarif;
     }
 
-    {
-        ++id;
-    }
-
     @Override
     public String toString() {
-        return "Chambre{" +
-                "id=" + id +
+        return "Chambre n° " +
+                id +
                 ", status=" + status +
                 ", nbrLits=" + nbrLits +
-                ", tarif=" + tarif +
-                '}';
+                ", tarif=" + tarif;
     }
 }

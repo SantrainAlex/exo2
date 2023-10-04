@@ -6,11 +6,11 @@ public class Client {
     private String prenom;
     private String tel;
 
-    {
-        ++id;
-    }
+    private static int nbrClient = 0;
+
 
     public Client( String nom, String prenom, String tel) {
+        this.id = nbrClient++;
         this.nom = nom;
         this.prenom = prenom;
         this.tel = tel;
@@ -48,11 +48,10 @@ public class Client {
 
     @Override
     public String toString() {
-        return "Client{" +
-                "id=" + id +
+        return "Client n°" +
+                id +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
-                ", tel='" + tel + '\'' +
-                '}';
+                ", tel='" + tel;
     }
 }
